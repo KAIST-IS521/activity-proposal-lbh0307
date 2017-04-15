@@ -12,44 +12,49 @@
 \begin{document}
 %%% Header starts
 \noindent{\large\textbf{IS-521 Activity Proposal}\hfill
-                \textbf{Your Name}} \\
-         {\phantom{} \hfill \textbf{GitHub ID}} \\
+                \textbf{이병학}} \\
+         {\phantom{} \hfill \textbf{lbh0307}} \\
          {\phantom{} \hfill Due Date: April 15, 2017} \\
 %%% Header ends
 
 \section{Activity Overview}
 
-Briefly describe what this activity is about, and \emph{why} you are
-proposing this activity. (활동에 대한 간략한 설명과 왜 이 활동을
-제안하는지에 대한 이유를 서술.)
+Secret sharing은 여러 암호화 프로토콜에서 응용되는 것으로, 한 비밀을 여러 인증된
+사람에게 나눠주고 그중 일정 이상의 사람이 모였을 때에만 원본 비밀을 알 수 있도록
+해주는 알고리즘을 말한다. 이 과제는 학생들이 간단한 형태의 Secret sharing
+algorithm을 구현하고 그것의 취약성을 확인한 뒤 발전된 형태의 알고리즘을 구현해보도록
+하는 것을 목표로 한다.
 
 \section{Exercises}
 
-Describe a series of exercises that students will carry out. (학생들이 하게
-될 연습문제를 순차적으로 서술.)
-
 \begin{exercise}
 
-  In this exercise, you do ...
+  우선, \textbf{Shamir's secret sharing scheme}\cite{SecShareShamir}을 이용해서
+  secret을 share하고 recover 하는 프로그램을 제작한다.
 
 \end{exercise}
 
 \begin{exercise}
 
-  In this exercise, you do ...
+  위에서 제작한 프로그램을 이용해 Secret sharing을 한 뒤, 이것의 취약성을 이용해
+  공격을 해본다. 취약성은 \cite{SecShareShamir}에서 확인할 수 있다.
 
 \end{exercise}
 
 \begin{exercise}
 
-  In this exercise, you do ...
+  위의 공격에 안전하도록 더 발전된 Secret sharing\cite{BetterSecShare}을 구현한다.
 
 \end{exercise}
 
 \section{Expected Solutions}
 
-Put expected solutions here.
-(예상되는 답안에 대해서 서술.)
+평가는 다음과 같이 이뤄진다.
+\begin{enumerate}
+  \item 주어진 알고리즘을 잘 구성했다.
+  \item Secret을 잘 복원한다.
+  \item 충분히 큰 Domain 에 대해서도 잘 작동한다.
+\end{enumerate}
 
 \bibliography{references}
 \bibliographystyle{plainnat}
